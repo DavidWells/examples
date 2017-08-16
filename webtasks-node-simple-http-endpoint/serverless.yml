@@ -1,0 +1,11 @@
+service: webtasks-serverless-simple-http-endpoint
+
+provider:
+  name: webtasks
+
+plugins:
+  - serverless-webtasks
+
+functions:
+  currentTime:
+    handler: currentTimeFunction
