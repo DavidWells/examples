@@ -1,0 +1,14 @@
+service: webtask-scheduled-cron-example
+
+provider:
+  name: webtasks
+
+plugins:
+  - serverless-webtasks
+
+functions:
+  cron:
+    handler: handler
+    events:
+      # Invoke Webtask function every minute
+      - schedule: rate(1 minute)
